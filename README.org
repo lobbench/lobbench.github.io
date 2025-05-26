@@ -31,9 +31,10 @@
 
 #+html: <div class="row"> <div class="col-md-12 text-center">
 #+attr_html: :class list-inline
-- @@html:<image src="imgs/stanford_logo.png" height="48px">@@
-- @@html:<image src="imgs/iliad.png" height="48px">@@
-- @@html:<image src="imgs/tml.png" height="48px">@@
+- @@html:<image src="imgs/oxford_logo.png" height="48px">@@
+- @@html:<image src="imgs/oxford_man_logo.jpg" height="48px">@@
+- @@html:<image src="imgs/flair_logo.png" height="48px">@@
+- 
 #+html: </div> </div>
 
 #+html: <div class="row"> <div class="col-md-4 col-md-offset-4 text-center">
@@ -120,7 +121,9 @@ TODO
 	</div>
 #+END_export
 
+#+html: <div class="row"><div class="col-md-8 col-md-offset-2">
 #+print_bibliography:
+#+html: </div></div>
 
 # Local Variables:
 # eval: (add-hook 'after-save-hook (lambda nil (when (y-or-n-p "Tangle?") (org-html-export-to-html))) nil t)

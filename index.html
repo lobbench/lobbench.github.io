@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-05-26 Mon 17:51 -->
+<!-- 2025-05-26 Mon 18:24 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>LOB-Bench: Benchmarking Generative AI for Finance &#x2013; an Application to Limit Order Book Data</title>
@@ -49,9 +49,10 @@
 
 <div class="row"> <div class="col-md-12 text-center">
 <ul class="org-ul list-inline">
-<li><image src="imgs/stanford_logo.png" height="48px"><br /></li>
-<li><image src="imgs/iliad.png" height="48px"><br /></li>
-<li><image src="imgs/tml.png" height="48px"><br /></li>
+<li><image src="imgs/oxford_logo.png" height="48px"><br /></li>
+<li><image src="imgs/oxford_man_logo.jpg" height="48px"><br /></li>
+<li><image src="imgs/flair_logo.png" height="48px"><br /></li>
+<li></li>
 </ul>
 </div> </div>
 
@@ -66,40 +67,40 @@
 
 
 
-<div id="orgeb6ea21" class="figure">
+<div id="org22ed99c" class="figure">
 <p><img src="./imgs/lobbench_img.png" alt="lobbench_img.png" width="100%" /><br />
 </p>
 </div>
-<div id="outline-container-orga7a429e" class="outline-2">
-<h2 id="orga7a429e"></h2>
-<div class="outline-text-2" id="text-orga7a429e">
+<div id="outline-container-org1bd751a" class="outline-2">
+<h2 id="org1bd751a"></h2>
+<div class="outline-text-2" id="text-org1bd751a">
 </div>
-<div id="outline-container-org0d010a9" class="outline-3">
-<h3 id="org0d010a9">Abstract</h3>
-<div class="outline-text-3" id="text-org0d010a9">
+<div id="outline-container-org4b93ecf" class="outline-3">
+<h3 id="org4b93ecf">Abstract</h3>
+<div class="outline-text-3" id="text-org4b93ecf">
 <p>
 While financial data presents one of the most challenging and interesting sequence modelling tasks due to high noise, heavy tails, and strategic interactions, progress in this area has been hindered by the lack of consensus on quantitative evaluation paradigms. To address this, we present LOB-Bench, a benchmark, implemented in python, designed to evaluate the quality and realism of generative message-by-order data for limit order books (LOB) in the LOBSTER format. Our framework measures distributional differences in conditional and unconditional statistics between generated and real LOB data, supporting flexible multivariate statistical evaluation. The benchmark also includes features commonly used LOB statistics such as spread, order book volumes, order imbalance, and message inter-arrival times, along with scores from a trained discriminator network. Lastly, LOB-Bench contains "market impact metrics", i.e. the cross-correlations and price response functions for specific events in the data. We benchmark generative autoregressive state-space models, a (C)GAN, as well as a parametric LOB model and find that the autoregressive GenAI approach beats traditional model classes.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org7ac299c" class="outline-3">
-<h3 id="org7ac299c">How to Use</h3>
-<div class="outline-text-3" id="text-org7ac299c">
+<div id="outline-container-org3429c3d" class="outline-3">
+<h3 id="org3429c3d">How to Use</h3>
+<div class="outline-text-3" id="text-org3429c3d">
 <p>
 TODO<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org8f461d6" class="outline-3">
-<h3 id="org8f461d6">Leaderboard</h3>
-<div class="outline-text-3" id="text-org8f461d6">
+<div id="outline-container-orgc02e706" class="outline-3">
+<h3 id="orgc02e706">Leaderboard</h3>
+<div class="outline-text-3" id="text-orgc02e706">
 <p>
 TODO<br />
 </p>
 </div>
-<div id="outline-container-org25f4857" class="outline-4">
-<h4 id="org25f4857">GOOG</h4>
-<div class="outline-text-4" id="text-org25f4857">
+<div id="outline-container-orgac0a0b6" class="outline-4">
+<h4 id="orgac0a0b6">GOOG</h4>
+<div class="outline-text-4" id="text-orgac0a0b6">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -167,9 +168,9 @@ TODO<br />
 </table>
 </div>
 </div>
-<div id="outline-container-org94e7404" class="outline-4">
-<h4 id="org94e7404">INTC</h4>
-<div class="outline-text-4" id="text-org94e7404">
+<div id="outline-container-org05e198c" class="outline-4">
+<h4 id="org05e198c">INTC</h4>
+<div class="outline-text-4" id="text-org05e198c">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -260,8 +261,10 @@ TODO<br />
 	  </div>
 	</div>
 
+<div class="row"><div class="col-md-8 col-md-offset-2">
 <p>
 [1] Peer Nagy and Sascha Frey and Kang Li and Bidipta Sarkar and Svitlana Vyetrenko and Stefan Zohren and Anisoara Calinescu and Jakob Foerster, <i>LOB-Bench: Benchmarking Generative AI for Finance &#x2013; an Application to Limit Order Book Data</i>, 2025.</p>
+</div></div>
 </div>
 </div>
 </div>
