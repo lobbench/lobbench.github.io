@@ -1,0 +1,127 @@
+#+title: LOB-Bench: Benchmarking Generative AI for Finance -- an Application to Limit Order Book Data
+#+description: LOB-Bench: Benchmarking Generative AI for Finance -- an Application to Limit Order Book Data
+#+KEYWORDS: homepage, website, research, AI
+#+LANGUAGE:  en
+#+OPTIONS: email:t toc:nil num:nil html-postamble:nil html-style:nil title:nil \n:t H:3
+#+startup: inlineimages
+#+EXPORT_FILE_NAME: index
+
+#+HTML_HEAD: <link rel="icon" type="image/x-icon" href="imgs/favicon.ico">
+
+#+PROPERTY:  header-args :eval never-export
+
+#+INCLUDE: "utils/header.org"
+
+
+@@html:<div class="row"><h2 class="col-md-12 text-center"><strong><font size="+4r">@@  LOB-Bench: Benchmarking Generative AI for Finance -- an Application to Limit Order Book Data  @@html:</font></strong></h2></div>@@
+
+
+#+html: <div class="row"> <div class="col-md-12 text-center">
+#+attr_html: :class list-inline
+- Peer Nagy*
+- Sascha Frey*
+- Kang Li
+- Bidipta Sarkar
+- Svitlana Vyetrenko
+- Stefan Zohren
+- Anisoara Calinescu
+- Jakob Foerster
+#+html: </div> </div>
+
+
+#+html: <div class="row"> <div class="col-md-12 text-center">
+#+attr_html: :class list-inline
+- @@html:<image src="imgs/stanford_logo.png" height="48px">@@
+- @@html:<image src="imgs/iliad.png" height="48px">@@
+- @@html:<image src="imgs/tml.png" height="48px">@@
+#+html: </div> </div>
+
+#+html: <div class="row"> <div class="col-md-4 col-md-offset-4 text-center">
+#+attr_html: :class nav nav-pills nav-justified
+- @@html:<a href="https://arxiv.org/abs/2502.09172"><image src="imgs/paper_front.jpg" height="60px"><h4><strong>Paper</strong></h4></a>@@
+- @@html:<a href="https://github.com/peernagy/lob_bench"><image src="imgs/GitHub-Mark.png" height="60px"><h4><strong>Code</strong></h4></a>@@
+#+html: </div></div>
+
+#+html: <div class="row"> <div class="col-md-8 col-md-offset-2">
+
+# @@html:<video width="100%" autoplay loop muted> <source src="imgs/Amongus.mp4" type="video/mp4"> </video>@@
+
+
+#+ATTR_HTML: :width 100%
+[[./imgs/lobbench_img.png]]
+
+* 
+
+** Abstract
+
+While financial data presents one of the most challenging and interesting sequence modelling tasks due to high noise, heavy tails, and strategic interactions, progress in this area has been hindered by the lack of consensus on quantitative evaluation paradigms. To address this, we present LOB-Bench, a benchmark, implemented in python, designed to evaluate the quality and realism of generative message-by-order data for limit order books (LOB) in the LOBSTER format. Our framework measures distributional differences in conditional and unconditional statistics between generated and real LOB data, supporting flexible multivariate statistical evaluation. The benchmark also includes features commonly used LOB statistics such as spread, order book volumes, order imbalance, and message inter-arrival times, along with scores from a trained discriminator network. Lastly, LOB-Bench contains "market impact metrics", i.e. the cross-correlations and price response functions for specific events in the data. We benchmark generative autoregressive state-space models, a (C)GAN, as well as a parametric LOB model and find that the autoregressive GenAI approach beats traditional model classes.
+
+** How to Use
+
+TODO
+
+** Leaderboard
+
+#+bibliography: bibliography.bib
+#+cite_export: basic numeric numeric
+TODO
+
+*** GOOG
+
+| Model                              | L1 | Wasserstein | Code | Models |
+|------------------------------------+----+-------------+------+--------|
+| LobS5 [cite:@nagy2025lobbench]     |    |             |      |        |
+| RWKV4  [cite:@nagy2025lobbench]    |    |             |      |        |
+| RWKV6  [cite:@nagy2025lobbench]    |    |             |      |        |
+| Baseline  [cite:@nagy2025lobbench] |    |             |      |        |
+| Coletta   [cite:@nagy2025lobbench] |    |             |      |        |
+
+
+*** INTC
+
+| Model                              | L1 | Wasserstein | Code | Models |
+|------------------------------------+----+-------------+------+--------|
+| LobS5 [cite:@nagy2025lobbench]     |    |             |      |        |
+| RWKV6  [cite:@nagy2025lobbench]    |    |             |      |        |
+| Baseline  [cite:@nagy2025lobbench] |    |             |      |        |
+| RWKV4   [cite:@nagy2025lobbench]   |    |             |      |        |
+
+
+
+#+html: </div>
+#+html: </div>
+
+#+html:</div></div></div>
+
+#+BEGIN_export html
+<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+            <h3>
+              Citation
+            </h3>
+            <div class="form-group col-md-10 col-md-offset-1">
+              <textarea id="bibtex" class="form-control" readonly>@inproceedings{nagy2025lobbench,
+	title={LOB-Bench: Benchmarking Generative AI for Finance -- an Application to Limit Order Book Data},
+	author={Peer Nagy and Sascha Frey and Kang Li and Bidipta Sarkar and Svitlana Vyetrenko and Stefan Zohren and Anisoara Calinescu and Jakob Foerster},
+	booktitle={Proceedings of the 42nd International Conference on Machine Learning},
+	year={2025}
+}</textarea>
+            </div>
+	  </div>
+	  
+	</div>
+	<div class="row">
+	  <div class="col-md-8 col-md-offset-2">
+            <p class="text-justify">
+              <br><br>
+              The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>
+            </p>
+	  </div>
+	</div>
+#+END_export
+
+#+print_bibliography:
+
+# Local Variables:
+# eval: (add-hook 'after-save-hook (lambda nil (when (y-or-n-p "Tangle?") (org-html-export-to-html))) nil t)
+# End:
