@@ -104,7 +104,7 @@ TODO
               <textarea id="bibtex" class="form-control" readonly>@inproceedings{nagy2025lobbench,
 	title={LOB-Bench: Benchmarking Generative AI for Finance -- an Application to Limit Order Book Data},
 	author={Peer Nagy and Sascha Frey and Kang Li and Bidipta Sarkar and Svitlana Vyetrenko and Stefan Zohren and Anisoara Calinescu and Jakob Foerster},
-	booktitle={Proceedings of the 42nd International Conference on Machine Learning},
+	booktitle={The 42nd International Conference on Machine Learning},
 	year={2025}
 }</textarea>
             </div>
