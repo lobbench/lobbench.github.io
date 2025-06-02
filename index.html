@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-05-26 Mon 18:27 -->
+<!-- 2025-06-02 Mon 15:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>LOB-Bench: Benchmarking Generative AI for Finance &#x2013; an Application to Limit Order Book Data</title>
@@ -52,14 +52,21 @@
 <li><image src="imgs/oxford_logo.png" height="48px"><br /></li>
 <li><image src="imgs/oxford_man_logo.jpg" height="48px"><br /></li>
 <li><image src="imgs/flair_logo.png" height="48px"><br /></li>
-<li></li>
 </ul>
 </div> </div>
+
+<div class="row"> <div class="col-md-12 text-center"><font size="+2">
+<ul class="org-ul list-inline">
+<li>ICML 2025<br /></li>
+</ul>
+</font></div> </div>
+
 
 <div class="row"> <div class="col-md-4 col-md-offset-4 text-center">
 <ul class="org-ul nav nav-pills nav-justified">
 <li><a href="https://arxiv.org/abs/2502.09172"><image src="imgs/paper_front.jpg" height="60px"><h4><strong>Paper</strong></h4></a><br /></li>
 <li><a href="https://github.com/peernagy/lob_bench"><image src="imgs/GitHub-Mark.png" height="60px"><h4><strong>Code</strong></h4></a><br /></li>
+<li><a href="https://huggingface.co/datasets/peernagy/lob_bench"><image src="imgs/huggingface.svg" height="60px"><h4><strong>Dataset</strong></h4></a><br /></li>
 </ul>
 </div></div>
 
@@ -67,168 +74,152 @@
 
 
 
-<div id="org37a57e6" class="figure">
+<div id="org9b9bce2" class="figure">
 <p><img src="./imgs/lobbench_img.png" alt="lobbench_img.png" width="100%" /><br />
 </p>
 </div>
-<div id="outline-container-orge7f284e" class="outline-2">
-<h2 id="orge7f284e"></h2>
-<div class="outline-text-2" id="text-orge7f284e">
+<div id="outline-container-orga67253d" class="outline-2">
+<h2 id="orga67253d"></h2>
+<div class="outline-text-2" id="text-orga67253d">
 </div>
-<div id="outline-container-orgc7647a2" class="outline-3">
-<h3 id="orgc7647a2">Abstract</h3>
-<div class="outline-text-3" id="text-orgc7647a2">
+<div id="outline-container-org79c2134" class="outline-3">
+<h3 id="org79c2134">Abstract</h3>
+<div class="outline-text-3" id="text-org79c2134">
 <p>
 While financial data presents one of the most challenging and interesting sequence modelling tasks due to high noise, heavy tails, and strategic interactions, progress in this area has been hindered by the lack of consensus on quantitative evaluation paradigms. To address this, we present LOB-Bench, a benchmark, implemented in python, designed to evaluate the quality and realism of generative message-by-order data for limit order books (LOB) in the LOBSTER format. Our framework measures distributional differences in conditional and unconditional statistics between generated and real LOB data, supporting flexible multivariate statistical evaluation. The benchmark also includes features commonly used LOB statistics such as spread, order book volumes, order imbalance, and message inter-arrival times, along with scores from a trained discriminator network. Lastly, LOB-Bench contains "market impact metrics", i.e. the cross-correlations and price response functions for specific events in the data. We benchmark generative autoregressive state-space models, a (C)GAN, as well as a parametric LOB model and find that the autoregressive GenAI approach beats traditional model classes.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-org59bf316" class="outline-3">
-<h3 id="org59bf316">How to Use</h3>
-<div class="outline-text-3" id="text-org59bf316">
+<div id="outline-container-orgd086222" class="outline-3">
+<h3 id="orgd086222">How to Use</h3>
+<div class="outline-text-3" id="text-orgd086222">
 <p>
-TODO<br />
+Please refer to the <a href="https://github.com/peernagy/lob_bench">benchmark readme</a> for information on how to use along with the <a href="https://github.com/peernagy/lob_bench/blob/main/tutorial_notebook.ipynb">tutorial notebook</a>.<br />
 </p>
 </div>
 </div>
-<div id="outline-container-orgf04fbf7" class="outline-3">
-<h3 id="orgf04fbf7">Leaderboard</h3>
-<div class="outline-text-3" id="text-orgf04fbf7">
+<div id="outline-container-orgb70db5b" class="outline-3">
+<h3 id="orgb70db5b">Leaderboard</h3>
+<div class="outline-text-3" id="text-orgb70db5b">
 <p>
-TODO<br />
+We evaluate models on a subsample of data from January 2023 (except for Coletta which was trained and tested on January 2019). If you would like to add your model to this leaderboard, please contact the authors <a href="mailto:bidipta.sarkar@eng.ox.ac.uk">via email</a>, and provide the directory of CSVs with data_real, data_gen, and data_cond as shown in the tutorial notebook so we can reproduce your results. We highly encourage open-source development of models, and will provide links to your code or model if provided.<br />
 </p>
 </div>
-<div id="outline-container-orgba41141" class="outline-4">
-<h4 id="orgba41141">GOOG</h4>
-<div class="outline-text-4" id="text-orgba41141">
+<div id="outline-container-orgf97b19a" class="outline-4">
+<h4 id="orgf97b19a">GOOG</h4>
+<div class="outline-text-4" id="text-orgf97b19a">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
 <col  class="org-left" />
 
-<col  class="org-left" />
+<col  class="org-right" />
 
-<col  class="org-left" />
-
-<col  class="org-left" />
+<col  class="org-right" />
 
 <col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="org-left">Model</th>
-<th scope="col" class="org-left">L1</th>
-<th scope="col" class="org-left">Wasserstein</th>
-<th scope="col" class="org-left">Code</th>
-<th scope="col" class="org-left">Models</th>
+<th scope="col" class="org-right">Wasserstein (&darr;)</th>
+<th scope="col" class="org-right">L1 (&darr;)</th>
+<th scope="col" class="org-left">Link</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">LobS5 (1)</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">RWKV4  (1)</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">LobS5 (3, 4)</td>
+<td class="org-right">0.16</td>
+<td class="org-right">0.14</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">RWKV6  (1)</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">Baseline  (1)</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">Baseline (2, 3)</td>
+<td class="org-right">0.29</td>
+<td class="org-right">0.36</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">Coletta   (1)</td>
+<td class="org-left">RWKV4 (3, 5)</td>
+<td class="org-right">0.36</td>
+<td class="org-right">0.29</td>
 <td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">RWKV6 (3, 6)</td>
+<td class="org-right">0.45</td>
+<td class="org-right">0.31</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">Coletta (1, 3)</td>
+<td class="org-right">0.54</td>
+<td class="org-right">0.48</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div id="outline-container-orgd10b524" class="outline-4">
-<h4 id="orgd10b524">INTC</h4>
-<div class="outline-text-4" id="text-orgd10b524">
+<div id="outline-container-orge9aea39" class="outline-4">
+<h4 id="orge9aea39">INTC</h4>
+<div class="outline-text-4" id="text-orge9aea39">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
 <col  class="org-left" />
 
-<col  class="org-left" />
+<col  class="org-right" />
 
-<col  class="org-left" />
-
-<col  class="org-left" />
+<col  class="org-right" />
 
 <col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
 <th scope="col" class="org-left">Model</th>
-<th scope="col" class="org-left">L1</th>
-<th scope="col" class="org-left">Wasserstein</th>
-<th scope="col" class="org-left">Code</th>
-<th scope="col" class="org-left">Models</th>
+<th scope="col" class="org-right">Wasserstein (&darr;)</th>
+<th scope="col" class="org-right">L1 (&darr;)</th>
+<th scope="col" class="org-left">Link</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="org-left">LobS5 (1)</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-</tr>
-
-<tr>
-<td class="org-left">RWKV6  (1)</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">LobS5 (3, 4)</td>
+<td class="org-right">0.19</td>
+<td class="org-right">0.13</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">Baseline  (1)</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+<td class="org-left">RWKV6  (3, 6)</td>
+<td class="org-right">0.26</td>
+<td class="org-right">0.32</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 
 <tr>
-<td class="org-left">RWKV4   (1)</td>
+<td class="org-left">Baseline (2, 3)</td>
+<td class="org-right">0.69</td>
+<td class="org-right">0.5</td>
 <td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-left">RWKV4  (3, 5)</td>
+<td class="org-right">0.81</td>
+<td class="org-right">0.61</td>
 <td class="org-left">&#xa0;</td>
 </tr>
 </tbody>
 </table>
-
 
 
 </div>
@@ -263,7 +254,22 @@ TODO<br />
 
 <div class="row"><div class="col-md-8 col-md-offset-2">
 <p>
-[1] Peer Nagy and Sascha Frey and Kang Li and Bidipta Sarkar and Svitlana Vyetrenko and Stefan Zohren and Anisoara Calinescu and Jakob Foerster, <i>LOB-Bench: Benchmarking Generative AI for Finance &#x2013; an Application to Limit Order Book Data</i>, 2025.</p>
+[1] Coletta, Andrea and Jerome, Joseph and Savani, Rahul and Vyetrenko, Svitlana, <i>Conditional Generators for Limit Order Book Environments: Explainability, Challenges, and Robustness</i>, 2023.</p>
+
+<p>
+[2] Cont, Rama and Stoikov, Sasha and Talreja, Rishi, <i>A stochastic model for order book dynamics</i>, Informs, 2010.</p>
+
+<p>
+[3] Peer Nagy and Sascha Frey and Kang Li and Bidipta Sarkar and Svitlana Vyetrenko and Stefan Zohren and Anisoara Calinescu and Jakob Foerster, <i>LOB-Bench: Benchmarking Generative AI for Finance &#x2013; an Application to Limit Order Book Data</i>, 2025.</p>
+
+<p>
+[4] Peer Nagy and Sascha Frey and Silvia Sapora and Kang Li and Anisoara Calinescu and Stefan Zohren and Jakob Foerster, <i>Generative AI for End-to-End Limit Order Book Modelling: A Token-Level Autoregressive Generative Model of Message Flow Using a Deep State Space Network</i>, 2023.</p>
+
+<p>
+[5] Peng, Bo and Alcaide, Eric and Anthony, Quentin and Albalak, Alon and Arcadinho, Samuel and Biderman, Stella and Cao, Huanqi and Cheng, Xin and Chung, Michael and Grella, Matteo and others, <i>Rwkv: Reinventing rnns for the transformer era</i>, arXiv preprint arXiv:2305.13048, 2023.</p>
+
+<p>
+[6] Peng, Bo and Goldstein, Daniel and Anthony, Quentin and Albalak, Alon and Alcaide, Eric and Biderman, Stella and Cheah, Eugene and Du, Xingjian and Ferdinan, Teddy and Hou, Haowen and others, <i>Eagle and finch: Rwkv with matrix-valued states and dynamic recurrence</i>, arXiv preprint arXiv:2404.05892, 2024.</p>
 </div></div>
 </div>
 </div>
